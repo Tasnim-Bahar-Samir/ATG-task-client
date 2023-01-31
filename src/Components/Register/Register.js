@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Register = () => {
     const {register, handleSubmit, formState:{errors}} = useForm();
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
 
     const handleRegister  = (data)=>{
@@ -22,7 +22,7 @@ const Register = () => {
         .then(data =>{
           if(data.success){
             toast.success("Registration complete. Login Now.")
-            // navigate('/login')
+            navigate('/login')
           }else{
             toast.error(data.message)
           }
@@ -84,7 +84,7 @@ const Register = () => {
           </div>
           
           <button type="submit" className="btn btn-success w-full mt-4">Register</button>
-          {/* <p className="text-center text-sm mt-[6px]">Already have an account?<Link to='/login' className="text-secondary">Login</Link></p> */}
+          <p className="text-center text-sm mt-[6px]">Already have an account?<Link to='/login' className="text-secondary">Login</Link></p>
         </form>
     </div>
   )
