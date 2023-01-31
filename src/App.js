@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
     <div className="App">
-      <p className='text-4xl text-red-600'>hello</p>
-      <button className='btn'>Submit</button>
+      <Toaster/>
+      <Register/>
     </div>
   );
 }
